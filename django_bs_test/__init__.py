@@ -4,6 +4,11 @@ from django.test.client import Client as djangoClient
 from django.test import TestCase as djangoTestCase
 from bs4 import BeautifulSoup
 
+try:
+    basestring
+except NameError:
+    basestring = str
+
 
 class Client(djangoClient):
 
