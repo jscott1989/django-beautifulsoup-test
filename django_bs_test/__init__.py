@@ -23,7 +23,7 @@ class Client(djangoClient):
         response = super(Client, self).request(**request)
         response.soup = None
         if isinstance(response.content, basestring):
-            response.soup = BeautifulSoup(response.content)
+            response.soup = BeautifulSoup(response.content, "html.parser")
         return response
 
 
