@@ -21,9 +21,10 @@ class Client(djangoClient):
 
         """
         response = super(Client, self).request(**request)
-        response.soup = None
-        if isinstance(response.content, basestring):
+        try:
             response.soup = BeautifulSoup(response.content, "html.parser")
+        except:
+            response.soup = None
         return response
 
 

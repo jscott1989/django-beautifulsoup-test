@@ -6,7 +6,7 @@ from setuptools import setup
 import os
 
 setup(name='django-beautifulsoup-test',
-      version='1.1.2',
+      version='1.1.3',
       description='TestCase class for using BeautifulSoup with Django tests',
       author='Jonathan Scott',
       author_email='jonathan@jscott.me',
